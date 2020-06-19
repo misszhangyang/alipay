@@ -1,4 +1,17 @@
-
+<!--
+http://127.0.0.1:9030/success.html?
+charset=utf-8
+out_trade_no=32&
+method=alipay.trade.wap.pay.return&
+total_amount=2.00&
+sign=XuCktyyRZV7YqmGWRgIGOud196rg77B8EPcVOypMNyp1U4Wk8gaYmH8kTTpTebSqeo2ZCoNX3tvJgTVNPHFjfWyPIWd9QUja5rS2G3PCw7xYRqHBN4jN25sYctDEVqIJ%2BUNIJugVD2zz4Ao%2FbmcSPr55ZoBgpVSKpDJjolNWEk3FXAkcwc9GEK2%2BMzBkSgioPjPAlyjk7X1YTQl%2BhvEvUSRnO7p6kqRJGjkS0O5A%2BMPtA5ZeC%2FRGWpfd0Yx9nbNtJXRt%2Bl%2BXWjZpz5ffY4WDgLJ11MWf%2BieGJbtXOk7U7MKl5IPy4%2FTFRuMN7f44K0LGm%2FXqAzOL%2Bod0w%2FA%2FrMIVMA%3D%3D&
+trade_no=2020061822001438790501063024&
+auth_app_id=2016102200738702&
+version=1.0&
+app_id=2016102200738702&
+sign_type=RSA2&seller_id=2088102180644790
+&timestamp=2020-06-18+21%3A21%3A41
+-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
@@ -151,65 +164,75 @@
 			<a target="_blank" href="https://b.alipay.com/home.htm"><span>商家服务</span></a>|
 			<a target="_blank" href="http://help.alipay.com/support/index_sh.htm"><span>帮助中心</span></a>
 		</dl>
-		<span class="title">支付宝扫码支付接口</span>
+		<span class="title">支付宝扫码结果展示</span>
 	</div>
 	<div class="cashier-nav">
-		<ol>
-			<li class="current">1、确认信息 →</li>
-			<li>2、点击确认 →</li>
-			<li class="last">3、确认完成</li>
-		</ol>
+		<h1>支付成功</h1>
 	</div>
-	<form name="alipayVO" id = "alipayVO" action="/pay/ali" method="post" target="_blank">
+	<form name="alipayVO"  target="_blank">
 		<div id="body" style="clear:left">
 			<dl class="content">
-				<dt>商户订单号：</dt>
+				<dt>字符类型：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeId" />
-					<span>必填</span>
+					<input id="tradeId" size="30" name="tradeId" />
 				</dd>
 
-				<dt>商品名称：</dt>
+				<dt>订单号：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeName" />
-					<span>必填</span>
+					<input id="tradeName" size="30" name="tradeName" />
 				</dd>
 
-				<dt>订单金额：</dt>
+				<dt>方法：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeCount" />
-					<span>订单总金额</span>
+					<input id="tradeCount" size="30" name="tradeCount" />
 				</dd>
 
-				<dt>商品描述：</dt>
+				<dt>交易金额：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeDesc" />
-					<span>必填</span>
+					<input id="tradeDesc" size="30" name="tradeDesc" />
 				</dd>
 
-				<dt>商品码：</dt>
+				<dt>签名串：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeAsc" />
-					<span>必填, 退款理由</span>
+					<input id="tradeAsc" size="30" name="tradeAsc" />
+				</dd>
+				<dt>交易号：</dt>
+				<dd>
+					<span class="null-star">*</span>
+					<input id="tradeTimeout" size="30" name="tradeTimeout" />
+				</dd>
+				<dt>商户id：</dt>
+				<dd>
+					<span class="null-star">*</span>
+					<input id="tradeNo" size="30" name="tradeTimeout" />
 				</dd>
 
+				<dt>版本：</dt>
+				<dd>
+					<span class="null-star">*</span>
+					<input id="version" size="30" name="tradeTimeout" />
+				</dd>
+
+				<dt>交易id：</dt>
+				<dd>
+					<span class="null-star">*</span>
+					<input id="tradeNoid" size="30" name="tradeTimeout" />
+				</dd>
+
+				<dt>加密方式：</dt>
+				<dd>
+					<span class="null-star">*</span>
+					<input id="signType" size="30" name="tradeTimeout" />
+				</dd>
 				<dt>交易超时时间：</dt>
 				<dd>
 					<span class="null-star">*</span>
-					<input size="30" name="tradeTimeout" />
-					<span>订单超时时间</span>
-				</dd>
-
-				<dt>确认：</dt>
-				<dd>
-					<span class="new-btn-login-sp">
-						<button type="submit" style="text-align:center;">确认</button>
-					</span>
+					<input id="timeout" size="30" name="tradeTimeout" />
 				</dd>
 			</dl>
 		</div>
@@ -223,5 +246,34 @@
 		</ul>
 	</div>
 </div>
+<script
+		src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		crossorigin="anonymous">
+</script>
+<script>
+	function GetRequest() {
+		debugger
+		var url = location.search; //获取url中"?"符后的字串
+		var theRequest = new Object();
+		if (url.indexOf("?") != -1) {
+		var str = url.substr(1);
+		strs = str.split('&');
+		var htmlArr = ["tradeId","tradeName","tradeCount","tradeDesc","tradeAsc","tradeTimeout","tradeNo","version",
+			"tradeNoid","signType","timeout"];
+	    for (var i = 0; strs.length; i++) {
+	    	document.getElementById(htmlArr[i]).value=strs[i];
+	        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+	    }
+	}
+     	return theRequest;
+	}
+	$(document).ready(function () {
+		var Request = new Object();
+		Request = GetRequest();
+		var val= Request["test"];
+		alert(val);
+	});
+</script>
 </body>
 </html>

@@ -23,10 +23,10 @@
             <version>1.2.58</version>
         </dependency>
         <!--tomcat依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-tomcat</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+<!--        </dependency>-->
         <!--jsp EL表达式-->
         <dependency>
             <groupId>javax.servlet</groupId>
